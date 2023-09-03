@@ -1,0 +1,29 @@
+kind: pi_networks
+version: 1.1.0
+pi_networks:
+- id: mgmt-network
+  deploy: true
+  pi_cloud_instance_id: pvs
+  pi_network_name: mgmt-network
+  pi_cidr: 172.31.116.0/23
+  pi_dns:
+  - 172.31.112.5
+  - 172.31.112.6
+  pi_network_type: vlan
+  pi_network_jumbo: true
+  pi_starting_ip_address: 172.31.116.50
+  pi_ending_ip_address: 172.31.117.254
+  pi_gateway:
+- id: sap-network
+  deploy: true
+  pi_cloud_instance_id: pvs
+  pi_network_name: sap-network
+  pi_cidr: 9.24.84.0/23
+  pi_dns:
+  - 172.31.112.5
+  - 172.31.112.6
+  pi_network_type: vlan
+  pi_network_jumbo: true
+  pi_starting_ip_address: 9.24.84.50
+  pi_ending_ip_address: 9.24.85.254
+  pi_gateway:
